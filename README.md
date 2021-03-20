@@ -36,7 +36,7 @@ I built this to serve my own need to create a tighter iteration loop when develo
 Using pip:
 
 ```sh
-pip install git+ssh://git@github.com:connor-mccarthy/snappy.git
+pip install git+https://github.com/connor-mccarthy/snappy.git
 ```
 ## The handler decorator
 Other than the CLI, this library features only a single decorator function that will designate any arbitrary Python functions that take [JSON Data Type](https://www.w3schools.com/js/js_json_datatypes.asp) as the Lambda event handler:

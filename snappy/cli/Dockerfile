@@ -2,7 +2,7 @@ FROM public.ecr.aws/lambda/python:3.7
 
 RUN pip install --upgrade pip
 
-RUN apt-get update && apt-get install -y git-all
+RUN yum upgrade -y && yum install git -y
 
 COPY . .
 
