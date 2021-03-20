@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "snappy"
 version = "0.1.0"
-description = ""
+description = "A small, opinionated CLI for lightning-fast deployment of simple Python apps / microservices on AWS Lambda."
 authors = ["Connor McCarthy <mccarthy.connor.james@gmail.com>"]
 license = "MIT"
 readme = "README.md"
