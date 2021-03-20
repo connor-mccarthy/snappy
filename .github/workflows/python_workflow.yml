@@ -1,0 +1,40 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7.10
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7.10
+    - name: Install poetry
+      uses: Gr1N/setup-poetry@v4
+    - name: Configure poetry
+      run: |
+        poetry config virtualenvs.in-project true
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
+    - name: Install dependencies
+      run: |
+        poetry install
+    - name: Lint with flake8
+      run: |
+        poetry run flake8 .
+    - name: Check formatting with black
+      run: |
+        poetry run black --check .
+    - name: Check typehints with mypy
+      run: |
+        poetry run mypy .
+    - name: Test with pytest
+      run: |
+        poetry run pytest .
