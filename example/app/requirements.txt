@@ -1,1 +1,2 @@
 pandas==1.2.3
+git+git://github.com/connor-mccarthy/snappy@master
