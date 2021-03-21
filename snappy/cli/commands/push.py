@@ -62,15 +62,14 @@ class PushCommand(Command):
             self.line("<error>Docker log in to ECR failed.</error>")
             return
 
-        image = get_default_lambda_image()
-        image.tag(uri, DEFAULT_IMAGE_TAG)
-
         self.add_style("processing", options=["blink"])
         self.line(
             f"<processing>🚀 Pushing your image to {repository_name}...</processing>"
         )
         self.line("This may take a bit...")
-        self.line("Hint: Use verbosity flag -v or greater for additional logging.")
+        self.line(
+            f"Hint: Use verbosity flag {command_style('-vv')} or greater for additional logging."
+        )
         self.line("")
 
         progress_dict = OrderedDict()

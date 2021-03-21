@@ -128,7 +128,7 @@ class AttachCommand(Command):
             if self.io.is_verbose():
                 self.line(str(update_function_code_response))
 
-            self.line("<info>🔁 Updating function code!<info>")
+            self.line("<info>🔁 Updating function code!</info>")
             self.line("It may take a few minutes for the change to take effect.")
             self.next_step_prompt()
 
