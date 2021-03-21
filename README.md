@@ -6,8 +6,8 @@
 <a href="https://github.com/connor-mccarthy/snappy/workflows/build/badge.svg">
     <img src="https://github.com/connor-mccarthy/snappy/workflows/build/badge.svg" alt="build" />
 </a>
-<a href="https://img.shields.io/github/v/release/connor-mccarthy/snappy?logo=github">
-    <img src="https://img.shields.io/github/v/release/connor-mccarthy/snappy?logo=github" alt="github-release" >
+<a href="https://img.shields.io/github/v/release/connor-mccarthy/snappy">
+    <img src="https://img.shields.io/github/v/release/connor-mccarthy/snappy" alt="github-release" >
 </a>
 </a>
 <a href="https://img.shields.io/badge/python-3.7.10-blue.svg">
@@ -30,7 +30,7 @@ Snappy also improves the developer experience by:
 
 Snappy does _not_ enable infinitely configurable deployments out of the box. For applications with complex dependencies or environment setups, interacting with the Docker and Lambda APIs directly will absolutely be preferred.
 
-I built this to serve my own need to create a tighter iteration loop when developing with Lambda.
+I built this to serve my own need to tighten up my iterative development loop when creating Lambda-based microservices.
 
 ## Installation
 Using pip:
@@ -43,9 +43,9 @@ Other than the CLI, this library features only a single decorator function that 
 
 ```python
 # app.py
-from snappy import event_hander
+from snappy import set_handler
 
-@event_hander
+@set_handler
 def greeting(name: str, age: int): -> str:
     return f"Hello! My name is {name}. I am {age} years old."
 ```
