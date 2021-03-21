@@ -57,7 +57,7 @@ class CheckCommand(Command):
 
         if yaml_paths != 1:
             self.line(
-                f"Run {command_style('{LIBRARY_NAME} init')} to configure a new yaml file for your project."
+                f"Run {command_style(f'{LIBRARY_NAME} init')} to configure a new yaml file for your project."
             )
 
         return False
