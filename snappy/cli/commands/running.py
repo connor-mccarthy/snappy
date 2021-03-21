@@ -25,7 +25,7 @@ class RunningCommand(Command):
 
             self.line("\n")
             self.line(
-                f"Run {command_style('{LIBRARY_NAME} stop')} to stop all local {INFORMAL_LOCAL_IMAGE_NAME}s."
+                f"Run {command_style(f'{LIBRARY_NAME} stop')} to stop all local {INFORMAL_LOCAL_IMAGE_NAME}s."
             )
 
         else:
