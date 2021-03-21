@@ -62,7 +62,7 @@ class AttachCommand(Command):
                 self.line(str(lambda_ecr_role_response))
 
             role_arn = lambda_ecr_role_response["Role"]["Arn"]
-            self.line("<info>Made your IAM role: {role_name}.</info>")
+            self.line(f"<info>Made your IAM role: {role_name}.</info>")
             self.line("")
 
             self.line(
@@ -83,7 +83,7 @@ class AttachCommand(Command):
                 self.line(str(create_policy_response))
 
             policy_arn = create_policy_response["Policy"]["Arn"]
-            self.line("<info>Made your IAM policy: {policy_name}.</info>")
+            self.line(f"<info>Made your IAM policy: {policy_name}.</info>")
 
             attach_policy_to_role_response = attach_policy_to_role(
                 policy_arn, role_name
