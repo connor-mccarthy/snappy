@@ -1,0 +1,3 @@
+lambda_function_name: snappy-demo-function
+repository_name: snappy-demo-repository
+role_name: snappy-demo-role

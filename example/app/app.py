@@ -1,4 +1,4 @@
-from lambda_handler import set_handler
+from snappy import set_handler
 
 
 @set_handler
