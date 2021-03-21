@@ -1,11 +1,8 @@
 from cleo import Command
 from docker.errors import ImageNotFound
 from snappy.cli.commands.stop import StopCommand
-from snappy.cli.constants import (
-    INFORMAL_LOCAL_CONTAINER_NAME,
-    INFORMAL_LOCAL_IMAGE_NAME,
-    LIBRARY_NAME,
-)
+from snappy.cli.constants import (INFORMAL_LOCAL_CONTAINER_NAME,
+                                  INFORMAL_LOCAL_IMAGE_NAME, LIBRARY_NAME)
 from snappy.cli.helpers.docker_helpers import run_default_lambda
 from snappy.cli.styles import command_style
 
@@ -49,5 +46,5 @@ class RunCommand(Command):
             f"Run {command_style(f'{LIBRARY_NAME} {StopCommand.name}')} to stop your {INFORMAL_LOCAL_CONTAINER_NAME} at any time."
         )
         self.line(
-            f"Run {command_style(f'{LIBRARY_NAME} run --local')} to test your function locally."
+            f"Run {command_style(f'{LIBRARY_NAME} invoke \'{}\' --local')} to test your function locally."
         )
