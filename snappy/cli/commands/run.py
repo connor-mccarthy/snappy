@@ -46,5 +46,5 @@ class RunCommand(Command):
             f"Run {command_style(f'{LIBRARY_NAME} {StopCommand.name}')} to stop your {INFORMAL_LOCAL_CONTAINER_NAME} at any time."
         )
         self.line(
-            f"Run {command_style(f'{LIBRARY_NAME} invoke \'{}\' --local')} to test your function locally."
+            f"Run {command_style(f'{LIBRARY_NAME} invoke')} with the  {command_style('--local')} switch to test your function locally."
         )
