@@ -92,7 +92,9 @@ class AttachCommand(Command):
             if self.io.is_verbose():
                 self.line(str(attach_policy_to_role_response))
 
-            self.line("<info>Attached policy {policy_name} to role {role_name}.</info>")
+            self.line(
+                f"<info>Attached policy {policy_name} to role {role_name}.</info>"
+            )
 
             self.line("")
 
