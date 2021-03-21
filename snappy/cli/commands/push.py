@@ -8,10 +8,7 @@ from snappy.cli.helpers.aws.ecr import (
     create_ecr_repository,
     get_repository_uri_from_name,
 )
-from snappy.cli.helpers.docker_helpers import (
-    get_default_lambda_image,
-    log_in_docker_to_ecr,
-)
+from snappy.cli.helpers.docker_helpers import log_in_docker_to_ecr
 from snappy.cli.helpers.yaml_helpers import read_configuration_yaml
 from snappy.cli.styles import command_style, file_style
 
