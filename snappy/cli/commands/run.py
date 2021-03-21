@@ -1,8 +1,11 @@
 from cleo import Command
 from docker.errors import ImageNotFound
 from snappy.cli.commands.stop import StopCommand
-from snappy.cli.constants import (INFORMAL_LOCAL_CONTAINER_NAME,
-                                  INFORMAL_LOCAL_IMAGE_NAME, LIBRARY_NAME)
+from snappy.cli.constants import (
+    INFORMAL_LOCAL_CONTAINER_NAME,
+    INFORMAL_LOCAL_IMAGE_NAME,
+    LIBRARY_NAME,
+)
 from snappy.cli.helpers.docker_helpers import run_default_lambda
 from snappy.cli.styles import command_style
 
